@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sort-history</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		
+		<style>
+			th{ 
+				color:#EE2222;
+				}
+		</style>
+
+</head>
+
+<body>
+<!-- Navigation -->
+<header>
+	<div style="float:left;width:40%;">
+    	<a href="#" class="logo"><img src="C:\Users\user\Desktop\uiux\pictures\logo.JPG" alt="" height="150px" width="150px">
+    	</a>
+	</div>
+	<div style="float:left;width:40%;margin-left: 65px">
+    <nav class="topnav">
+        <a class="active" href="#Menu">Home</a>
+        <a href="./order.html">Order</a>
+        <a href="./order.html#deals">Promotions</a>
+        <a href="./Feedbackform.html#Contact%20Us">Contact Us</a>
+        <a href="./sorthistory.html#About">About</a>
+    </nav>
+	</div>
+</header>
+
+<table class="table table-striped">
+    <tr  class="bg-white">
+        <th data-column="name" data-order="desc">Name &#9650</th>
+        <th data-column="Quantity" data-order="desc">Quantity &#9650</th>
+        <th data-column="date" data-order="desc">Date &#9650</th>
+    </tr>
+
+    <tbody id="myTable">
+        
+    </tbody>
+</table>
+
+<script>
+	var myArray = [
+	    {'name':'Michael', 'Quantity':'3', 'date':'11/10/2020'},
+	    {'name':'Mila', 'Quantity':'2', 'date':'10/1/2020'},
+	    {'name':'Paul', 'Quantity':'9', 'date':'10/14/2020'},
+	    {'name':'Dennis', 'Quantity':'2', 'date':'11/29/2020'},
+	    {'name':'Tim', 'Quantity':'7', 'date':'3/12/2020'},
+	    {'name':'Erik', 'Quantity':'4', 'date':'10/31/2020'},
+	]
+
+	$('th').on('click', function(){
+		var column = $(this).data('column')
+		var order = $(this).data('order')
+		var text = $(this).html()
+		text = text.substring(0, text.length - 1)
+
+		if(order == 'desc'){
+			$(this).data('order', "asc")
+			myArray = myArray.sort((a,b) => a[column] > b[column] ? 1 : -1)
+			text += '&#9660'
+
+		}else{
+			$(this).data('order', "desc")
+			myArray = myArray.sort((a,b) => a[column] < b[column] ? 1 : -1)
+			text += '&#9650'
+
+		}
+		$(this).html(text)
+		buildTable(myArray)
+	})
+
+	buildTable(myArray)
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+		table.innerHTML = ''
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+							<td>${data[i].name}</td>
+							<td>${data[i].Quantity}</td>
+							<td>${data[i].date}</td>
+					  </tr>`
+			table.innerHTML += row
+
+
+		}
+	}
+
+</script>
+
+<div class="rating-css">
+    <div>Rating<br>Review</div>
+    <div class="star-icon">
+      <input type="radio" name="rating1" id="rating1">
+      <label for="rating1" class="fa fa-star"></label>
+      <input type="radio" name="rating1" id="rating2">
+      <label for="rating2" class="fa fa-star"></label>
+      <input type="radio" name="rating1" id="rating3">
+      <label for="rating3" class="fa fa-star"></label>
+      <input type="radio" name="rating1" id="rating4">
+      <label for="rating4" class="fa fa-star"></label>
+      <input type="radio" name="rating1" id="rating5">
+      <label for="rating5" class="fa fa-star"></label>
+    </div>
+  </div>
+
+</body>
+</html>

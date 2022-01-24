@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<META NAME="Author" content="">
+<META NAME="KeyWords" content="">
+<META NAME="Description" content="">
+
+    
+    <link rel="stylesheet" href="ordernow.css"/>
+
+    <script>
+        function stickyMenu() {
+            var sticky=document.getElementById('sticky');
+            if(window.pageYoffset>220){
+                sticky.classList.add('sticky';)
+            }
+            else{
+                sticky.classList.remove('sticky');
+            }
+        }
+        window.onscroll = function () {
+            stickyMenu();
+            
+        }
+    </script>
+</head>
+
+<body>
+    <div class="parallax">
+        <div class="page-title"> Order History </div>
+    </div>
+<div class="menu" id="sticky">
+    <ul class="menu-ul">
+        <a href="index.html" class="a-menu"><li>Home</li></a>
+        <a href="#deals" class="a-menu"><li>Deals</li></a>
+        <a href="#Vegetables" class="a-menu"><li>Vegetables</li></a>
+        <a href="#FruitSalads" class="a-menu"><li>fruit salads</li></a>
+        <a href="#Meat&seafood" class="a-menu"><li>Meat</li></a>
+        <a href="./sorthistory.html#Contact%20Us" class="a-menu"><li>Cart</li></a>
+    </ul>
+    <div class="search-box">
+        <form>
+            <input type="text" placeholder="Search..." name="search" class="search-input"/>
+            <button type="submit"> <i class="fa fa-search"></i> </button>
+        </form>
+    </div>
+</div>
+<!-- Page Begins-->
+<div class="container">
+    <a href="#Vegetables">
+        <div class="categories">
+            <img src="C:\Users\user\Desktop\uiux\pictures\veg-soup.jpg" class="item-image"/>
+            <div class="image-title">Vegetables</div>
+        </div>
+    </a>
+    <a href="#FruitSalads">
+        <div class="categories">
+            <img src="C:\Users\user\Desktop\uiux\pictures\fruit-salad.jpg" class="item-image"/>
+            <div class="image-title">fruit-salads</div>
+        </div>
+    </a>
+    <a href="#Meat&seafood">
+        <div class="categories">
+            <img src="C:\Users\user\Desktop\uiux\pictures\meatcurry.jpg" class="item-image"/>
+            <div class="image-title">Meat & Seafood Curry</div>
+        </div>
+    </a>
+    <a href="#deals">
+        <div class="categories">
+            <img src="C:\Users\user\Desktop\uiux\pictures\discount.jpg" class="item-image"/>
+            <div class="image-title">Deals</div>
+        </div>
+    </a>
+</div>
+    <div class = "deals-container" id="deals">
+        <div class="parallax">
+            <div class="title">Deals</div>
+        </div>
+        <div class="deal">
+            save 20% on min-purchase of $164 On vegetables<br/>
+            <button class="Coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            save 10% on min-purchase of $167 On meat&Seafood Curry<br/>
+            <button class="Coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            save 30% on min-purchase of $159 On Buriyani<br/>
+            <button class="Coupon-btn">Add Coupon</button>
+        </div>
+        <div class="deal">
+            save 50% on min-purchase of $111 On Fruit Salad<br/>
+            <button class="Coupon-btn">Add Coupon</button>
+        </div>
+    </div>
+
+        <div class = "deals-container" id="Vegetables">
+            <div class="parallax">
+                <div class="title">Vegetables</div>
+            </div>
+            <div class ="items">
+                <div class="images">
+                    <img src="C:\Users\user\Desktop\uiux\pictures\veg\1.jpg" class="item-image-size"/> 
+                </div>
+                <div class="description">
+                    <b>Vege Mojo</b>
+                    <div class="item-select">
+                        price: $3.19 
+                </div>
+                <label>Qty</label>
+                <select class="item-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select> </br>
+                <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+            </div>
+        </div>
+
+        <div class ="items">
+            <div class="images">
+                <img src="C:\Users\user\Desktop\uiux\pictures\veg\2.jpg" class="item-image-size"/> 
+            </div>
+            <div class="description">
+                <b>Vege salad</b>
+                <div class="item-select">
+                    price: $7.19 
+                </div>
+            <label>Qty</label>
+            <select class="item-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select> </br>
+            <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+
+        <div class ="items">
+            <div class="images">
+                <img src="C:\Users\user\Desktop\uiux\pictures\veg\3.jpg" class="item-image-size"/> 
+            </div>
+            <div class="description">
+                <b>Vege pulav</b>
+                <div class="item-select">
+                    price: $4.99 
+                </div>
+            <label>Qty</label>
+            <select class="item-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select> </br>
+            <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class = "deals-container" id="FruitSalads">
+    <div class="parallax">
+        <div class="title">fruit-salads</div>
+    </div>
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\fruits\2.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>fruit salad</b>
+            <div class="item-select">
+                price: $6.19 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+    </div>
+</div>
+
+
+
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\fruits\3.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>grapes mix</b>
+            <div class="item-select">
+                price: $5.99 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\fruits\1.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>stawberry mix</b>
+            <div class="item-select">
+                price: $5.99 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+</div>
+
+
+<div class = "deals-container" id="Meat&seafood">
+    <div class="parallax">
+        <div class="title">Meat&seafood</div>
+    </div>
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\meat curry\1.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>Muttun pay</b>
+            <div class="item-select">
+                price: $16.19 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+    </div>
+</div>
+
+
+
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\meat curry\2.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>mutton</b>
+            <div class="item-select">
+                price: $5.99 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+
+    <div class ="items">
+        <div class="images">
+            <img src="C:\Users\user\Desktop\uiux\pictures\meat curry\3.jpg" class="item-image-size"/> 
+        </div>
+        <div class="description">
+            <b>Naan with chicken</b>
+            <div class="item-select">
+                price: $5.99 
+            </div>
+        <label>Qty</label>
+        <select class="item-select">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select> </br>
+        <button onclick="location.href = './sorthistory.html#Contact%20Us'; time()" class="buynow-btn">View Details</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="image1">
+    <img width="100%" height="100%" src="C:\Users\user\Desktop\uiux\pictures\footer.jpg"/>
+</div>
+
+
+<!-- Page End-->
+
+</body>
+</html>

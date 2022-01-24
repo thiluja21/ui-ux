@@ -1,0 +1,43 @@
+.btn {
+    border-radius: 0; 
+}
+  
+  .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default {
+    background: #ff3c20;
+    border-color: #ff3c20;
+    color: white; 
+}
+  
+  .buttonGray {
+    padding: 9px 20px;
+    background: #555;
+    color: #fff;
+    border-radius: 3px;
+    border: none; 
+}
+.buttonGray:hover {
+      background: #ff3c20;
+      border-color: #ff3c20;
+      color: #fff; 
+    }
+  
+  .submit {
+    margin: 1em 0; }
+  
+  select, textarea {
+    color: #666; 
+}
+.textarea {
+    height: auto;
+    resize: none; }
+  
+  select {
+    box-shadow: none;
+    padding-left: 5px;
+    -webkit-box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("../image/icons/bg-selectbox.html") no-repeat right center #fff; }
+
+  
+  
